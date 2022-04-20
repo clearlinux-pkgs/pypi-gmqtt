@@ -4,7 +4,7 @@
 #
 Name     : pypi-gmqtt
 Version  : 0.5.1
-Release  : 43
+Release  : 44
 URL      : https://files.pythonhosted.org/packages/17/ab/a3c884fb01e67df233ee878ff54dbb0c1e5297b828d7399afb7d089c68f7/gmqtt-0.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/17/ab/a3c884fb01e67df233ee878ff54dbb0c1e5297b828d7399afb7d089c68f7/gmqtt-0.5.1.tar.gz
 Summary  : Client for MQTT protocol
@@ -14,9 +14,6 @@ Requires: pypi-gmqtt-license = %{version}-%{release}
 Requires: pypi-gmqtt-python = %{version}-%{release}
 Requires: pypi-gmqtt-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: gmqtt
-Provides: gmqtt-python
-Provides: gmqtt-python3
 
 %description
 ### Python MQTT client implementation.
@@ -70,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641438764
+export SOURCE_DATE_EPOCH=1650496783
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
