@@ -4,7 +4,7 @@
 #
 Name     : pypi-gmqtt
 Version  : 0.5.1
-Release  : 51
+Release  : 52
 URL      : https://files.pythonhosted.org/packages/17/ab/a3c884fb01e67df233ee878ff54dbb0c1e5297b828d7399afb7d089c68f7/gmqtt-0.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/17/ab/a3c884fb01e67df233ee878ff54dbb0c1e5297b828d7399afb7d089c68f7/gmqtt-0.5.1.tar.gz
 Summary  : Client for MQTT protocol
@@ -14,6 +14,9 @@ Requires: pypi-gmqtt-license = %{version}-%{release}
 Requires: pypi-gmqtt-python = %{version}-%{release}
 Requires: pypi-gmqtt-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 ### Python MQTT client implementation.
@@ -70,15 +73,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656526616
+export SOURCE_DATE_EPOCH=1672274977
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -95,7 +98,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-gmqtt
-cp %{_builddir}/gmqtt-0.5.1/LICENSE %{buildroot}/usr/share/package-licenses/pypi-gmqtt/03c27e3e7b67f7256a1223d8c79042655f96cb28
+cp %{_builddir}/gmqtt-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-gmqtt/03c27e3e7b67f7256a1223d8c79042655f96cb28 || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
