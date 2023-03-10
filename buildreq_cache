@@ -1,0 +1,10 @@
+0.6.12
+pypi(atomicwrites)
+pypi(codecov)
+pypi(more_itertools)
+pypi(py)
+pypi(pytest)
+pypi(pytest_asyncio)
+pypi(pytest_cov)
+pypi(six)
+pypi(uvloop)
