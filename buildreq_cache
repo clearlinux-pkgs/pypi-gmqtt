@@ -1,5 +1,6 @@
 0.6.12
 pypi(atomicwrites)
+pypi(attrs)
 pypi(codecov)
 pypi(more_itertools)
 pypi(py)
