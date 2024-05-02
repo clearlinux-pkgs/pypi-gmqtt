@@ -1,8 +1,7 @@
-0.6.14
+0.6.16
 pypi(atomicwrites)
 pypi(attrs)
 pypi(codecov)
-pypi(more_itertools)
 pypi(py)
 pypi(pytest)
 pypi(pytest_asyncio)
