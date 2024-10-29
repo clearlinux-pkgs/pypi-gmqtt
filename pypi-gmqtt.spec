@@ -7,7 +7,7 @@
 #
 Name     : pypi-gmqtt
 Version  : 0.6.16
-Release  : 62
+Release  : 63
 URL      : https://files.pythonhosted.org/packages/aa/b2/8beaf329ad822409a89cef9beced927dbe9b9aa8887d9859ac5e3d2d4c19/gmqtt-0.6.16.tar.gz
 Source0  : https://files.pythonhosted.org/packages/aa/b2/8beaf329ad822409a89cef9beced927dbe9b9aa8887d9859ac5e3d2d4c19/gmqtt-0.6.16.tar.gz
 Summary  : Client for MQTT protocol
