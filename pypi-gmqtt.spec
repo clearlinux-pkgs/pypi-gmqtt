@@ -7,7 +7,7 @@
 #
 Name     : pypi-gmqtt
 Version  : 0.7.0
-Release  : 65
+Release  : 66
 URL      : https://files.pythonhosted.org/packages/21/70/73ec54da16079da319b035af48b908204f9629ecd1187720d11799ac35d8/gmqtt-0.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/21/70/73ec54da16079da319b035af48b908204f9629ecd1187720d11799ac35d8/gmqtt-0.7.0.tar.gz
 Summary  : Client for MQTT protocol
